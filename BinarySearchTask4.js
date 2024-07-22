@@ -31,7 +31,7 @@ let array =[1,2,3,4,5,6,7,8,9];//define an array
 let wantedNum =2;//define the wanted number 
 if (myBinarySearch(array,wantedNum,0,array.length -1 )){
     console.log("The binary search found the wanted Number " +wantedNum +" in your array");
-}
+}//output the result if found
 else{
     console.log("Sorry not found");
-    }
+    }//output if not found 
