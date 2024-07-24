@@ -1,0 +1,147 @@
+<!DOCTYPE html><!--HTML Tag-->
+<html lang="en"><!--Specifying English as the language of the page-->
+  <head><!--Start head tag-->
+    <meta charset="UTF-8"><!--The encoding character for this html document , 
+    it supports all Unicode characters to ensure everything is displayed correctly -->
+    <title>Computer Component Form</title> <!--The title that page will have in the URL-->
+    <link rel="stylesheet" href="computerComponentFormStyle.css" /> <!--Linking the CSS page -->
+    <script src="computerComponentFormJS.js"></script><!--Linking the JavaScript Page-->
+  </head><!--End head tag-->
+  <body><!--Start body-->
+    <h1>Computer Component Form</h1><!--The heading on top of the page-->
+    <p>Please fill out this form with the required information</p><!--Below the heading to tell the user what to do -->
+    <form id="orderForm"><!--Creating a form element with orderForm ID-->
+      <fieldset><!--Field set to group form elements-->
+        <!--Label and input for the First Name-->
+        <label for="first-name">Enter Your First Name: <input id="first-name" name="first-name" type="text" required /></label>
+        <!--Label and input for the Last Name-->
+        <label for="last-name">Enter Your Last Name: <input id="last-name" name="last-name" type="text" required /></label>
+        <!--Label and input for the Email-->
+        <label for="email">Enter Your Email: <input id="email" name="email" type="email" required /></label>
+        <!--Label and input for the Verification Code-->
+        <label for="verification-code">Enter the verification code: <input id="verification-code" name="verification-code" type="password" pattern="[a-z0-5]{8,8}" required placeholder="Enter the 8 figure code" /></label>
+      </fieldset>
+      <fieldset>
+         <!-- Radio buttons for department selection -->
+        <label for="it-department"><input id="it-department" type="radio" name="department" class="inline" /> IT Department </label>
+        <label for="business-department"><input id="business-department" type="radio" name="department" class="inline" /> Business Department</label>
+         <!-- Checkbox for agreeing to terms and conditions -->
+        <label for="terms-and-conditions">
+          <input id="terms-and-conditions" type="checkbox" required name="terms-and-conditions" class="inline" />By proceeding you agree to the <a href="https://policies.google.com/privacy">terms and conditions</a>
+        </label>
+      </fieldset>
+      <fieldset>
+        <!-- File input for uploading staff ID picture -->
+        <label for="staff-id-picture">Upload your staff id picture: <input id="staff-id-picture" type="file" name="file" /></label>
+        <!-- Number input for specifying months to wait -->
+        <label for="months-to-wait"> how many months can you wait to ge it <input id="months-to-wait" type="number" name="months-to-wait" min="0.5" max="100" /></label>
+        </fieldset>
+        <fieldset>
+          <!-- Dropdown for selecting CPU -->
+            <label for="cpu" >Select the CPU :
+              <select id="cpu" name="cpu" required>
+                <option value="">(select one)</option>
+                <option value="1">Intel i9</option>
+                <option value="2"> Intel i7</option>
+                <option value="3">AMD Ryzen 7</option>
+                <option value="4">AMD Ryzen 5</option>
+              </select>
+            </label>
+      </fieldset>
+      <fieldset>
+        <!-- Dropdown for selecting GPU -->
+        <label for="gpu">Select the GPU :
+          <select id="gpu" name="gpu" required>
+            <option value="">(select one)</option>
+            <option value="1">Nvidia RTX 3080</option>
+            <option value="2">Nvidia RTX 3070</option>
+            <option value="3">AMD RX 6800</option>
+            <option value="4">AMD RX 6700</option>
+          </select>
+        </label>
+  </fieldset>
+  <fieldset>
+    <!-- Dropdown for selecting RAM -->
+    <label for="ram">Select the RAM :
+      <select id="ram" name="ram" required>
+        <option value="">(select one)</option>
+        <option value="1">16 GB</option>
+        <option value="2"> 32 GB</option>
+        <option value="3">64 GB</option>
+      </select>
+    </label>
+</fieldset>
+<fieldset>
+  <!-- Dropdown for selecting Storage -->
+    <label for="storage">Select the Storage :
+      <select id="storage" name="storage" required>
+        <option value="">(select one)</option>
+        <option value="1">1 TB SSD</option>
+        <option value="2"> 2 TB SSD</option>
+        <option value="3">1 TB HDD</option>
+        <option value="4">2 TB HDD</option>
+      </select>
+    </label>
+</fieldset>
+<fieldset>
+  <!-- Dropdown for selecting motherboard -->
+    <label for="motherboard">Select the motherboard :
+      <select id="motherboard" name="motherboard" required>
+        <option value="">(select one)</option>
+        <option value="1">Intel Z490</option>
+        <option value="2">AMD X570</option>
+      </select>
+    </label>
+</fieldset>
+<fieldset>
+   <!-- Dropdown for selecting Power Supply -->
+    <label for="powersupply">Select the Power Supply :
+      <select id="powersupply" name="powersupply" required>
+        <option value="">(select one)</option>
+        <option value="1">500 W</option>
+        <option value="2">750 W</option>
+        <option value="3">1000 W </option>
+      </select>
+    </label>
+</fieldset>
+<fieldset>
+   <!-- Dropdown for selecting Cooling System -->
+    <label for="cooling">Select the Cooling System :
+      <select id="cooling" name="cooling" required>
+        <option value="">(select one)</option>
+        <option value="1">Air Cooling</option>
+        <option value="2">Liquid Cooling</option>
+      </select>
+    </label>
+</fieldset>
+<fieldset>
+  <!-- Dropdown for selecting Case -->
+    <label for="case">Select the Case :
+      <select id="case" name="case" required>
+        <option value="">(select one)</option>
+        <option value="1">Mid Tower</option>
+        <option value="2"> Full Tower</option>
+        <option value="3">Mini Tower</option>
+      </select>
+    </label>
+</fieldset>
+<fieldset>
+  <!-- Dropdown for selecting Peripherals -->
+    <label for="peripherals">Select Peripherals :
+      <select id="peripherals" name="peripherals" required>
+        <option value="">(select one)</option>
+        <option value="1">Monitor</option>
+        <option value="2">Keyboard</option>
+        <option value="3">Mouse</option>
+      </select>
+    </label>
+    <!-- Textarea for additional notes -->
+    <label for="note">Adittional Note:
+        <textarea id="note" name="note" rows="3" cols="30" placeholder="any additional comments or specifications"></textarea>
+      </label>
+</fieldset>
+<!-- Submit button for the form -->
+      <input id="submit" type="submit" value="Submit" />
+    </form><!--Close the form tag-->
+  </body><!--Close the body tag-->
+</html><!--End HTML tag -->
